@@ -28,7 +28,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "mil.bsu.gecko",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
