@@ -1,10 +1,52 @@
-# Svelte + TS + Vite
+<div align="center">
+  <a href="https://github.com/EANsim/gecko">
+    <img src=".github/img/logo.png" alt="Logo" width="80" height="80">
+  </a>
+  <h3 align="center">Project gecko</h3>
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+  <p align="center">
+    The SA-8 Gecko simulator repo is a software repository that aims to simulate the functionality and behavior of the SA-8 Gecko missile system
+    <br />
+    <a href="https://github.com/EANsim/project-gecko-legacy/tree/master/Docs"><strong>Explore the docs »</strong></a>
+    <br />
+  </p>
+</div>
 
 ## Recommended IDE Setup
 
 [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+
+## How to start work?
+
+### Firstly, install pre requirements
+
+See [here](https://tauri.app/v1/guides/getting-started/prerequisites/)
+
+### After requirements installed
+
+1. Run
+
+```bash
+cargo install tauri-cli
+```
+
+2. Go to project root and run:
+
+```bash
+npm install
+```
+
+3. To run application in dev mode:
+
+```bash
+cargo tauri dev
+```
+
+4. To build production ready application:
+
+```bash
+cargo tauri build
+```
 
 ## Need an official Svelte framework?
 
@@ -45,3 +87,20 @@ If you have state that's important to retain within a component, consider creati
 import { writable } from 'svelte/store'
 export default writable(0)
 ```
+
+## Project Architecture
+
+The project plan outlines the [major milestones and tasks for the development of the project »](https://github.com/EANsim/gecko/milestones)
+
+![Image](.github/img/project_arch.png)
+
+### Colors meaning is a priority of a system:
+1. Red
+2. Orange
+3. Green
+4. Blue
+5. Gray
+
+## License
+
+This project is licensed under the [special license](LICENSE). Please see the LICENSE file for more details.
