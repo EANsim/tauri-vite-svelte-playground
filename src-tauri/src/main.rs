@@ -1,7 +1,6 @@
-mod web_server {
-    pub mod server;
+mod server {
+    pub mod web_server;
 }
-
 fn main() {
-    web_server::server::setup_server();
+    server::web_server::setup_server();
 }

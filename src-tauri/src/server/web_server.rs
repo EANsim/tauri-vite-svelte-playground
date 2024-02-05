@@ -4,7 +4,7 @@
 use actix_web::{get, App as ActixApp, HttpResponse, HttpServer, Responder};
 
 const IP_ADDRESS: &str = "0.0.0.0";
-const PORT: u16 = 8080;
+const PORT: u16 = 12345;
 
 #[get("/")]
 async fn hello() -> impl Responder {
@@ -15,12 +15,9 @@ pub fn setup_server() {
     tauri::Builder::default()
         .setup(|_app| {
             tauri::async_runtime::spawn(
-                HttpServer::new(|| {
-                    ActixApp::new()
-                        .service(hello)
-                })
+                HttpServer::new(|| ActixApp::new().service(hello))
                     .bind((IP_ADDRESS, PORT))?
-                    .run()
+                    .run(),
             );
             Ok(())
         })
