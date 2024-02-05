@@ -19,8 +19,8 @@ serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 tauri = { version = "1.5.4", features = [] }
 actix-web = "4"
-sqlx = {version = "0.7.3", features = ["runtime-async-std", "mysql"]}
-async-std = {version = "1.12", features = ["attributes"]}
+sqlx = {version = "0.7.3", features = ["runtime-async-std", "mysql"] }
+async-std = {version = "1.12", features = ["attributes"] }
 rusqlite = { version = "0.30.0", features = ["bundled"] }
 
 [[bin]]
