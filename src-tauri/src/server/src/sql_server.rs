@@ -1,4 +1,4 @@
-/* use sqlx::mysql::MySqlPool;
+use sqlx::mysql::MySqlPool;
 use std::env;
 use structopt::StructOpt;
 
@@ -98,4 +98,3 @@ ORDER BY id
 
     Ok(())
 }
-*/
