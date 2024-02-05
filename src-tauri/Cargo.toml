@@ -1,11 +1,11 @@
 [package]
-name = "9K33M-simulator"
+name = "simulator"
 version = "0.1.0"
 description = "9K33M simulator built with tauri"
 authors = ["Evgeniy G.", "Nikita M.", "Aleksey Y."]
 license = "Apache-2.0"
 repository = "https://github.com/EANsim/gecko"
-default-run = "app"
+default-run = "simulator"
 edition = "2021"
 rust-version = "1.60"
 
