@@ -24,3 +24,7 @@ path = "src/test_db.rs"
 [[bin]]
 name = "terminal_server"
 path = "src/terminal_server_main.rs"
+
+[[bin]]
+name = "tcp_server"
+path = "src/tcp_server.rs"
