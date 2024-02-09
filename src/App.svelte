@@ -6,10 +6,18 @@
 
 <main>
     <ul class="button-list">
-        <li><button>Создать сервер</button></li>
-        <li><button>Подключиться к серверу</button></li>
-        <li><button>Настройки</button></li>
-        <li><button on:click={exit_application}>Выход</button></li>
+        <li>
+            <button>Создать сервер</button>
+        </li>
+        <li>
+            <button>Подключиться к серверу</button>
+        </li>
+        <li>
+            <button>Настройки</button>
+        </li>
+        <li>
+            <button on:click={exit_application}>Выход</button>
+        </li>
     </ul>
 </main>
 
