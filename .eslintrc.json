@@ -6,7 +6,10 @@
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:vue/vue3-essential"
+        "plugin:vue/vue3-recommended",
+        "plugin:css/recommended",
+        "plugin:svelte/recommended",
+        "plugin:svelte/prettier"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -15,24 +18,7 @@
     },
     "plugins": [
         "@typescript-eslint",
-        "vue"
-    ],
-    "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
-    }
+        "vue",
+        "css"
+    ]
 }

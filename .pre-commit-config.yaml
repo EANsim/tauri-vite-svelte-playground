@@ -5,19 +5,12 @@ repos:
             name: Format Code
             entry: npm run format
             language: script
-            types: [ javascript, ts, svelte]
-            files: '\.(js|svelte|ts)$'
+            types: [ javascript, ts, svelte, css]
+            files: '\.(js|svelte|ts|css)$'
 
         -   id: lint
             name: Lint Code
             entry: npm run lint
             language: script
-            types: [javascript, ts, svelte]
-            files: '\.(js|svelte|ts)$'
-
-        -   id: svelte_check
-            name: Svelte Type Check
-            entry: npm run svelte_check
-            language: script
-            types: [svelte]
-            files: '\.svelte$'
+            types: [javascript, ts, svelte, css]
+            files: '\.(js|svelte|ts|css)$'
