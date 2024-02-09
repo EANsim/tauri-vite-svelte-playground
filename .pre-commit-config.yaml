@@ -1,0 +1,23 @@
+repos:
+  -   repo: local
+      hooks:
+        -   id: format
+            name: Format Code
+            entry: npm run format
+            language: script
+            types: [ javascript, ts, svelte]
+            files: '\.(js|svelte|ts)$'
+
+        -   id: lint
+            name: Lint Code
+            entry: npm run lint
+            language: script
+            types: [javascript, ts, svelte]
+            files: '\.(js|svelte|ts)$'
+
+        -   id: svelte_check
+            name: Svelte Type Check
+            entry: npm run svelte_check
+            language: script
+            types: [svelte]
+            files: '\.svelte$'
