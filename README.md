@@ -165,14 +165,14 @@ export default writable(0)
 
 </details>
 
+
 ## Project Architecture
 
-The project plan outlines
-the [major milestones and tasks for the development of the project »](https://github.com/EANsim/gecko/milestones)
+The project architecture delineates the major milestones and tasks for the development of the project. For a detailed breakdown, refer to the [project milestones](https://github.com/EANsim/gecko/milestones).
 
-![Image](.github/img/project_arch.png)
+![Project Architecture](.github/img/project_arch.png)
 
-### Colors meaning is a priority of a system:
+### Priority Color Codes:
 
 1. Red
 2. Orange
@@ -182,4 +182,4 @@ the [major milestones and tasks for the development of the project »](https://g
 
 ## License
 
-This project is licensed under the [special license](LICENSE). Please see the LICENSE file for more details.
+This project is licensed under the [Special License](LICENSE). Please refer to the LICENSE file for further information.
