@@ -1,47 +1,50 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  const exit_application = () => {
+    close();
+  };
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <ul class="button-list">
+    <li><button>Создать сервер</button></li>
+    <li><button>Подключиться к серверу</button></li>
+    <li><button>Настройки</button></li>
+    <li><button on:click={exit_application}>Выход</button></li>
+  </ul>
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  :global(body) {
+    background-image: url("./assets/main_menu_background.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+
+  .button-list {
+    list-style: none;
+    margin: 100px 0 20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+
+  li {
+    margin-bottom: 10px;
   }
-  .read-the-docs {
-    color: #888;
+
+  button {
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+    background-color: rgba(22, 21, 21, 0.9);
+    cursor: pointer;
   }
 </style>
