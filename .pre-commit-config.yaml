@@ -1,16 +1,21 @@
 repos:
-    - repo: local
-      hooks:
-          - id: format
-            name: Format Code
-            entry: npm run format
-            language: system
-            types: [ javascript, ts, svelte, css]
-            files: '\.(js|svelte|ts|css)$'
+    -   repo: local
+        hooks:
+            -   id: format
+                name: Format Code
+                entry: npm run format
+                language: system
+                types: [ javascript, ts, svelte, css ]
+                files: '\.(js|svelte|ts|css)$'
 
-          - id: lint
-            name: Lint Code
-            entry: npm run lint
-            language: system
-            types: [javascript, ts, svelte]
-            files: '\.(js|svelte|ts)$'
+            -   id: lint
+                name: Lint Code
+                entry: npm run lint
+                language: system
+                types: [ javascript, ts, svelte ]
+                files: '\.(js|svelte|ts)$'
+
+            -   id: vite_build
+                name: Build vite (frontend)
+                entry: npm run build .
+                language: system
