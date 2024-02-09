@@ -10,8 +10,8 @@
         "vitest": "vitest",
         "vitest_coverage": "vitest run --coverage",
         "svelte_check": "svelte-check --tsconfig ./tsconfig.json",
-        "format": "prettier --write \"src/**/*.+(js|svelte|ts|css)\"",
-        "lint": "eslint --ext .js,.svelte,.ts src/"
+        "format": "prettier --write \"./**/*.+(js|svelte|ts|css)\"",
+        "lint": "eslint --ext .js,.svelte,.ts ./src"
     },
     "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "^3.0.1",
