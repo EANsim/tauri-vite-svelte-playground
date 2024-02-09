@@ -1,5 +1,6 @@
 # More info - https://pre-commit.com/
 # Testing command: pre-commit run
+# Refer to README.md on installation process
 repos:
     -   repo: local
         hooks:
