@@ -103,11 +103,17 @@ pre-commit --version
 
 ## Need an official Svelte framework?
 
+<details>
+
 Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its
 serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less,
 and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
 
+</details>
+
 ## Technical considerations
+
+<details>
 
 **Why use this over SvelteKit?**
 
@@ -156,6 +162,8 @@ import {writable} from 'svelte/store'
 
 export default writable(0)
 ```
+
+</details>
 
 ## Project Architecture
 
