@@ -4,15 +4,15 @@
 repos:
     -   repo: local
         hooks:
-            -   id: format
-                name: Format Code
+            -   id: format_frontend
+                name: Format fronted code
                 entry: npm run format
                 language: system
                 types: [ javascript, ts, svelte, css ]
                 files: '\.(js|svelte|ts|css)$'
 
-            -   id: lint
-                name: Lint Code
+            -   id: lint_frontend
+                name: Lint frontend code
                 entry: npm run lint
                 language: system
                 types: [ javascript, ts, svelte ]
@@ -22,3 +22,15 @@ repos:
                 name: Build vite (frontend)
                 entry: npm run build .
                 language: system
+
+            -   id: rust-fmt
+                name: rust-fmt
+                entry: cargo fmt -- --check
+                language: system
+                types: [ rust ]
+
+            -   id: clippy
+                name: clippy
+                entry: cargo clippy -- -D warnings
+                language: system
+                types: [ rust ]
