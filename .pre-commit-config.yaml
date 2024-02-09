@@ -1,16 +1,16 @@
 repos:
-  -   repo: local
+    - repo: local
       hooks:
-        -   id: format
+          - id: format
             name: Format Code
             entry: npm run format
-            language: script
+            language: system
             types: [ javascript, ts, svelte, css]
             files: '\.(js|svelte|ts|css)$'
 
-        -   id: lint
+          - id: lint
             name: Lint Code
             entry: npm run lint
-            language: script
-            types: [javascript, ts, svelte, css]
-            files: '\.(js|svelte|ts|css)$'
+            language: system
+            types: [javascript, ts, svelte]
+            files: '\.(js|svelte|ts)$'
