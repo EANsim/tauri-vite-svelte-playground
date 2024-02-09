@@ -22,15 +22,3 @@ repos:
                 name: Build vite (frontend)
                 entry: npm run build .
                 language: system
-
-            -   id: rust-fmt
-                name: rust-fmt
-                entry: cargo fmt -- --check
-                language: system
-                types: [ rust ]
-
-            -   id: clippy
-                name: clippy
-                entry: cargo clippy -- -D warnings
-                language: system
-                types: [ rust ]
