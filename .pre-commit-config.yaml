@@ -16,7 +16,7 @@ repos:
             pass_filenames: false
 
           - id: eslint
-            name: JavaScript Linting with ESLint
+            name: JS, TS & Svelte Linting with ESLint
             description: Checks JavaScript, TypeScript, and Svelte files for common issues and enforces coding standards.
             entry: npm run lint
             language: system
