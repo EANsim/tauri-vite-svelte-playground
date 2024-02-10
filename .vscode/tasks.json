@@ -18,9 +18,9 @@
                     "message": 5
                 },
                 "background": {
-                    "activeOnStart": true,
-                    "beginsPattern": "Compilation started.",
-                    "endsPattern": "Compilation complete."
+                    "activeOnStart": false,
+                    "beginsPattern": "Local:\\s+http://localhost:\\d+/",
+                    "endsPattern": "press h \\+ enter to show help"
                 }
             }
         },
@@ -41,8 +41,8 @@
                 },
                 "background": {
                     "activeOnStart": true,
-                    "beginsPattern": "Compilation started.",
-                    "endsPattern": "Compilation complete."
+                    "beginsPattern": "Tauri build started",
+                    "endsPattern": "Tauri build completed"
                 }
             }
         }
