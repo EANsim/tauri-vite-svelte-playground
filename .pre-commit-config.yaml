@@ -9,8 +9,8 @@ repos:
             description: Automatically formats code using Prettier to ensure consistent styling across the project.
             entry: npm run format
             language: system
-            types: [text]
             args: []
+            stages: [pre-commit]
             require_serial: false
             minimum_pre_commit_version: '0'
             pass_filenames: false
@@ -21,18 +21,28 @@ repos:
             entry: npm run lint
             language: system
             args: []
+            stages: [pre-commit]
             require_serial: false
             additional_dependencies: []
             minimum_pre_commit_version: '0'
             pass_filenames: false
+
+          - id: cargo_fmt
+            name: Rust Code Formatting with cargo fmt
+            description: Applies Rust formatting rules to all files to ensure consistency and readability.
+            entry: cargo fmt --all
+            language: rust
+            stages: [pre-commit]
+            pass_filenames: false
+            always_run: true
 
           - id: vite_build
             name: Vite Frontend Build Process
             description: Compiles the Vite frontend application, ensuring that the latest changes are built and ready for deployment.
             entry: npm run build
             language: system
-            types: []
             args: []
+            stages: [pre-merge-commit]
             require_serial: false
             additional_dependencies: []
             minimum_pre_commit_version: '0'
@@ -44,6 +54,7 @@ repos:
             entry: cargo clippy --all-targets # To treat warnings as errors add: '-- -D warnings'
             language: rust
             args: []
+            stages: [pre-merge-commit]
             require_serial: false
             additional_dependencies: []
             minimum_pre_commit_version: '0'

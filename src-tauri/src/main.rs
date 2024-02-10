@@ -16,12 +16,9 @@ fn setup_server() {
     tauri::Builder::default()
         .setup(|app| {
             tauri::async_runtime::spawn(
-                HttpServer::new(|| {
-                    ActixApp::new()
-                        .service(hello)
-                })
+                HttpServer::new(|| ActixApp::new().service(hello))
                     .bind((IP_ADDRESS, PORT))?
-                    .run()
+                    .run(),
             );
             Ok(())
         })
