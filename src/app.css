@@ -6,7 +6,7 @@
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
 
-    background-image: url("./assets/main_menu_background.jpg");
+    background-image: url('./assets/main_menu_background.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
