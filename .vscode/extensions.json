@@ -1,3 +1,16 @@
 {
-    "recommendations": ["svelte.svelte-vscode", "vadimcn.vscode-lldb"]
+    "recommendations": [
+        "svelte.svelte-vscode",
+        "vadimcn.vscode-lldb",
+        "phind.phind",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "antfu.vite",
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml",
+        "serayuzgur.crates",
+        "jedeop.crates-completer",
+        "hbenl.vscode-test-explorer",
+        "swellaby.vscode-rust-test-adapter"
+    ]
 }
