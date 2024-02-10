@@ -1,30 +1,49 @@
 # More info - https://pre-commit.com/
 # Testing command: pre-commit run
-# Refer to README.md on installation process
+# Refer to README.md for installation instructions
 repos:
     - repo: local
       hooks:
-          - id: format_frontend
-            name: Format fronted code
+          - id: prettier
+            name: Code Formatting with Prettier
+            description: Automatically formats code using Prettier to ensure consistent styling across the project.
             entry: npm run format
             language: system
-            types: [javascript, ts, svelte, css]
-            files: '\.(js|svelte|ts|css)$'
+            types: [text]
+            args: []
+            require_serial: false
+            minimum_pre_commit_version: '0'
 
-          - id: lint_frontend
-            name: Lint frontend code
+          - id: eslint
+            name: JavaScript Linting with ESLint
+            description: Checks JavaScript, TypeScript, and Svelte files for common issues and enforces coding standards.
             entry: npm run lint
             language: system
-            types: [javascript, ts, svelte]
-            files: '\.(js|svelte|ts)$'
+            args: []
+            require_serial: false
+            additional_dependencies: []
+            minimum_pre_commit_version: '0'
+            pass_filenames: false
 
           - id: vite_build
-            name: Build vite frontend
-            entry: npm run build .
+            name: Vite Frontend Build Process
+            description: Compiles the Vite frontend application, ensuring that the latest changes are built and ready for deployment.
+            entry: npm run build
             language: system
+            types: []
+            args: []
+            require_serial: false
+            additional_dependencies: []
+            minimum_pre_commit_version: '0'
+            pass_filenames: false
 
           - id: cargo_build_with_clippy
-            name: Build all targets with clippy analyzer
+            name: Rust Build and Analysis with Cargo and Clippy
+            description: Builds all Rust targets and performs static analysis with Clippy to catch potential issues early.
             entry: cargo clippy --all-targets # To treat warnings as errors add: '-- -D warnings'
-            language: system
-            types: [rust]
+            language: rust
+            args: []
+            require_serial: false
+            additional_dependencies: []
+            minimum_pre_commit_version: '0'
+            pass_filenames: false
