@@ -2,29 +2,29 @@
 # Testing command: pre-commit run
 # Refer to README.md on installation process
 repos:
-    -   repo: local
-        hooks:
-            -   id: format_frontend
-                name: Format fronted code
-                entry: npm run format
-                language: system
-                types: [ javascript, ts, svelte, css ]
-                files: '\.(js|svelte|ts|css)$'
+    - repo: local
+      hooks:
+          - id: format_frontend
+            name: Format fronted code
+            entry: npm run format
+            language: system
+            types: [javascript, ts, svelte, css]
+            files: '\.(js|svelte|ts|css)$'
 
-            -   id: lint_frontend
-                name: Lint frontend code
-                entry: npm run lint
-                language: system
-                types: [ javascript, ts, svelte ]
-                files: '\.(js|svelte|ts)$'
+          - id: lint_frontend
+            name: Lint frontend code
+            entry: npm run lint
+            language: system
+            types: [javascript, ts, svelte]
+            files: '\.(js|svelte|ts)$'
 
-            -   id: vite_build
-                name: Build vite frontend
-                entry: npm run build .
-                language: system
+          - id: vite_build
+            name: Build vite frontend
+            entry: npm run build .
+            language: system
 
-            -   id: cargo_build_with_clippy
-                name: Build all targets with clippy analyzer
-                entry: cargo clippy --all-targets # To treat warnings as errors add: '-- -D warnings'
-                language: system
-                types: [ rust ]
+          - id: cargo_build_with_clippy
+            name: Build all targets with clippy analyzer
+            entry: cargo clippy --all-targets # To treat warnings as errors add: '-- -D warnings'
+            language: system
+            types: [rust]

@@ -10,7 +10,7 @@
         "vitest": "vitest",
         "vitest_coverage": "vitest run --coverage",
         "svelte_check": "svelte-check --tsconfig ./tsconfig.json",
-        "format": "prettier --write \"./**/*.+(js|svelte|ts|css)\"",
+        "format": "prettier --write .",
         "lint": "eslint --ext .js,.svelte,.ts ./src"
     },
     "devDependencies": {

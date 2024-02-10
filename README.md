@@ -16,20 +16,20 @@
 
 For the best development experience, we recommend using one of the following IDE setups:
 
-- [VS Code](https://code.visualstudio.com/)
-  with [Svelte extension](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+-   [VS Code](https://code.visualstudio.com/)
+    with [Svelte extension](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
 
-  or
+    or
 
-- [RustRover](https://www.jetbrains.com/rust/) with [Svelte plugin](https://plugins.jetbrains.com/plugin/12375-svelte)
+-   [RustRover](https://www.jetbrains.com/rust/) with [Svelte plugin](https://plugins.jetbrains.com/plugin/12375-svelte)
 
 For more information on debugging:
 
-- RustRover: [Debugging with RustRover](https://tauri.app/v1/guides/debugging/rustrover/)
+-   RustRover: [Debugging with RustRover](https://tauri.app/v1/guides/debugging/rustrover/)
 
-  or
+    or
 
-- VsCode: [Debugging with VsCode](https://tauri.app/v1/guides/debugging/vs-code/)
+-   VsCode: [Debugging with VsCode](https://tauri.app/v1/guides/debugging/vs-code/)
 
 ## How to Start Working?
 
@@ -99,7 +99,7 @@ pre-commit install
 pre-commit --version
 ```
 
-### 6. Formatting, linting, testing  and other scripts can be found in `package.json`
+### 6. Formatting, linting, testing and other scripts can be found in `package.json`
 
 ## Need an official Svelte framework?
 
@@ -117,8 +117,8 @@ and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
 
 **Why use this over SvelteKit?**
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+-   It brings its own routing solution which might not be preferable for some users.
+-   It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
 
 This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account
 the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the
@@ -158,13 +158,12 @@ replaced by HMR.
 ```ts
 // store.ts
 // An extremely simple external store
-import {writable} from 'svelte/store'
+import { writable } from 'svelte/store';
 
-export default writable(0)
+export default writable(0);
 ```
 
 </details>
-
 
 ## Project Architecture
 
