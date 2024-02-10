@@ -1,36 +1,111 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb",
+            "type": "node",
             "request": "launch",
-            "name": "Tauri Development Debug",
-            "cargo": {
-                "args": [
-                    "build",
-                    "--manifest-path=./src-tauri/Cargo.toml",
-                    "--no-default-features"
-                ]
-            },
-            // task for the `beforeDevCommand` if used, must be configured in `.vscode/tasks.json`
-            "preLaunchTask": "ui:dev"
+            "name": "Launch Development Server",
+            "runtimeExecutable": "npm",
+            "args": ["run", "dev"],
+            "console": "integratedTerminal",
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Build Project",
+            "runtimeExecutable": "npm",
+            "args": ["run", "build"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Preview Built Application",
+            "runtimeExecutable": "npm",
+            "args": ["run", "preview"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Execute Vitest Tests",
+            "runtimeExecutable": "npm",
+            "args": ["run", "vitest"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Generate Vitest Coverage Report",
+            "runtimeExecutable": "npm",
+            "args": ["run", "vitest_coverage"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Perform Svelte Component Check",
+            "runtimeExecutable": "npm",
+            "args": ["run", "svelte_check"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Format Code With Prettier",
+            "runtimeExecutable": "npm",
+            "args": ["run", "format"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Lint Code With ESLint",
+            "runtimeExecutable": "npm",
+            "args": ["run", "lint"],
+            "console": "integratedTerminal"
         },
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Tauri Production Debug",
+            "name": "Debug Tauri in Development Mode",
             "cargo": {
                 "args": [
                     "build",
-                    "--release",
-                    "--manifest-path=./src-tauri/Cargo.toml"
+                    "--manifest-path=./Cargo.toml",
+                    "--no-default-features"
                 ]
             },
-            // task for the `beforeBuildCommand` if used, must be configured in `.vscode/tasks.json`
+            "preLaunchTask": "ui:dev",
+            "postDebugTask": "stop ui:dev"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Tauri in Production Mode",
+            "cargo": {
+                "args": ["build", "--release", "--manifest-path=./Cargo.toml"]
+            },
             "preLaunchTask": "ui:build"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Start Chromium Frontend Debug Session",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/src",
+            "preLaunchTask": "ui:dev",
+            "postDebugTask": "stop ui:dev"
+        },
+        {
+            "type": "firefox",
+            "request": "launch",
+            "name": "Start Firefox Frontend Debug Session",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/src",
+            "preLaunchTask": "ui:dev",
+            "postDebugTask": "stop ui:dev"
         }
     ]
 }
