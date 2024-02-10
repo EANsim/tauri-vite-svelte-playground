@@ -30,14 +30,16 @@ repos:
           - id: cargo_fmt
             name: Rust Code Formatting with cargo fmt
             description: Applies Rust formatting rules to all files to ensure consistency and readability.
-            entry: cargo fmt --all
+            entry: cargo fmt --
             language: rust
+            types: [rust]
+            files: '\.(rs)'
             args: []
             stages: [pre-commit]
             require_serial: false
             additional_dependencies: []
             minimum_pre_commit_version: '0'
-            pass_filenames: false
+            pass_filenames: true
 
           - id: vite_build
             name: Vite Frontend Build Process
