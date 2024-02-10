@@ -1,24 +1,66 @@
 # More info - https://pre-commit.com/
 # Testing command: pre-commit run
-# Refer to README.md on installation process
+# Refer to README.md for installation instructions
 repos:
-    -   repo: local
-        hooks:
-            -   id: format_frontend
-                name: Format fronted code
-                entry: npm run format
-                language: system
-                types: [ javascript, ts, svelte, css ]
-                files: '\.(js|svelte|ts|css)$'
+    - repo: local
+      hooks:
+          - id: prettier
+            name: Code Formatting with Prettier
+            description: Automatically formats code using Prettier to ensure consistent styling across the project.
+            entry: npm run format
+            language: system
+            args: []
+            stages: [pre-commit]
+            require_serial: false
+            minimum_pre_commit_version: '0'
+            pass_filenames: false
 
-            -   id: lint_frontend
-                name: Lint frontend code
-                entry: npm run lint
-                language: system
-                types: [ javascript, ts, svelte ]
-                files: '\.(js|svelte|ts)$'
+          - id: eslint
+            name: JS, TS & Svelte Linting with ESLint
+            description: Checks JavaScript, TypeScript, and Svelte files for common issues and enforces coding standards.
+            entry: npm run lint
+            language: system
+            args: []
+            stages: [pre-commit]
+            require_serial: false
+            additional_dependencies: []
+            minimum_pre_commit_version: '0'
+            pass_filenames: false
 
-            -   id: vite_build
-                name: Build vite (frontend)
-                entry: npm run build .
-                language: system
+          - id: cargo_fmt
+            name: Rust Code Formatting with cargo fmt
+            description: Applies Rust formatting rules to all files to ensure consistency and readability.
+            entry: cargo fmt --
+            language: rust
+            types: [rust]
+            files: '\.(rs)'
+            args: []
+            stages: [pre-commit]
+            require_serial: false
+            additional_dependencies: []
+            minimum_pre_commit_version: '0'
+            pass_filenames: true
+
+          - id: vite_build
+            name: Vite Frontend Build Process
+            description: Compiles the Vite frontend application, ensuring that the latest changes are built and ready for deployment.
+            entry: npm run build
+            language: system
+            args: []
+            stages: [pre-merge-commit]
+            require_serial: false
+            additional_dependencies: []
+            minimum_pre_commit_version: '0'
+            pass_filenames: false
+
+          - id: cargo_build_with_clippy
+            name: Rust Build and Analysis with Cargo and Clippy
+            description: Builds all Rust targets and performs static analysis with Clippy to catch potential issues early.
+            entry: cargo clippy --all-targets # To treat warnings as errors add: '-- -D warnings'
+            language: rust
+            args: []
+            stages: [pre-merge-commit]
+            require_serial: false
+            additional_dependencies: []
+            minimum_pre_commit_version: '0'
+            pass_filenames: false

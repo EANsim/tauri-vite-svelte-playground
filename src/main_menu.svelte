@@ -22,19 +22,6 @@
 </main>
 
 <style>
-    :global(body) {
-        background-image: url('./assets/main_menu_background.jpg');
-        background-size: cover;
-        background-position: center;
-        min-height: 100vh;
-        min-width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
     .button-list {
         list-style: none;
         margin: 100px 0 20px;

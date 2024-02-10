@@ -14,9 +14,26 @@
         "parser": "@typescript-eslint/parser",
         "sourceType": "module"
     },
-    "plugins": ["@typescript-eslint"],
+    "plugins": ["@typescript-eslint", "snakecasejs"],
+    "settings": {
+        "snakecasejs/filter": ["ClassDeclaration", "NewExpression"],
+        "snakecasejs/whitelist": ["externalPath", "setNumber"]
+    },
     "rules": {
         "indent": ["error", 4],
-        "linebreak-style": ["error", "unix"]
+        "linebreak-style": ["error", "unix"],
+        "snakecasejs/snakecasejs": "error",
+        "new-cap": ["error", { "capIsNew": true, "newIsCap": true }],
+        "complexity": ["warn", 10],
+        "eqeqeq": ["error", "smart"],
+        "no-implicit-globals": "error",
+        "no-magic-numbers": ["warn", { "ignore": [-1, 0, 1] }],
+        "no-param-reassign": "error",
+        "no-shadow": "error",
+        "no-undef": "error",
+        "no-use-before-define": [
+            "error",
+            { "functions": false, "classes": false }
+        ]
     }
 }
