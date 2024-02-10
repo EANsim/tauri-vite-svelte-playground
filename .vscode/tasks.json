@@ -18,10 +18,20 @@
                     "message": 5
                 },
                 "background": {
-                    "activeOnStart": false,
+                    "activeOnStart": true,
                     "beginsPattern": "Local:\\s+http://localhost:\\d+/",
                     "endsPattern": "press h \\+ enter to show help"
                 }
+            }
+        },
+        {
+            "label": "stop ui:dev",
+            "type": "shell",
+            "command": "echo ${input:terminate}",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
             }
         },
         {
@@ -45,6 +55,14 @@
                     "endsPattern": "Tauri build completed"
                 }
             }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "terminate",
+            "type": "command",
+            "command": "workbench.action.tasks.terminate",
+            "args": "ui:dev"
         }
     ]
 }

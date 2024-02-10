@@ -77,7 +77,8 @@
                     "--no-default-features"
                 ]
             },
-            "preLaunchTask": "ui:dev"
+            "preLaunchTask": "ui:dev",
+            "postDebugTask": "stop ui:dev"
         },
         {
             "type": "lldb",
