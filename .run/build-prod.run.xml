@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run tauri app" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-    <option name="command" value="run --no-default-features" />
-    <option name="workingDirectory" value="file://." />
+  <configuration default="false" name="build-prod" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+    <option name="command" value="tauri build" />
+    <option name="workingDirectory" value="file://$PROJECT_DIR$" />
     <envs />
     <option name="emulateTerminal" value="true" />
     <option name="channel" value="DEFAULT" />

@@ -19,6 +19,12 @@ repos:
                 files: '\.(js|svelte|ts)$'
 
             -   id: vite_build
-                name: Build vite (frontend)
+                name: Build vite frontend
                 entry: npm run build .
                 language: system
+
+            -   id: cargo_build_with_clippy
+                name: Build all targets with clippy analyzer
+                entry: cargo clippy --all-targets # To treat warnings as errors add: '-- -D warnings'
+                language: system
+                types: [ rust ]
