@@ -32,9 +32,12 @@ repos:
             description: Applies Rust formatting rules to all files to ensure consistency and readability.
             entry: cargo fmt --all
             language: rust
+            args: []
             stages: [pre-commit]
+            require_serial: false
+            additional_dependencies: []
+            minimum_pre_commit_version: '0'
             pass_filenames: false
-            always_run: true
 
           - id: vite_build
             name: Vite Frontend Build Process
