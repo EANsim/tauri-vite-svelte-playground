@@ -7,14 +7,44 @@
             "isBackground": true,
             "command": "npm",
             "args": ["run", "dev"],
-            "problemMatcher": []
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(error|warning|info)\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Compilation started.",
+                    "endsPattern": "Compilation complete."
+                }
+            }
         },
         {
             "label": "ui:build",
             "type": "shell",
             "command": "npm",
             "args": ["run", "build"],
-            "problemMatcher": []
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(error|warning|info)\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Compilation started.",
+                    "endsPattern": "Compilation complete."
+                }
+            }
         }
     ]
 }
