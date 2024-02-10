@@ -88,6 +88,13 @@
                 "args": ["build", "--release", "--manifest-path=./Cargo.toml"]
             },
             "preLaunchTask": "ui:build"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Edge against localhost",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/src"
         }
     ]
 }
