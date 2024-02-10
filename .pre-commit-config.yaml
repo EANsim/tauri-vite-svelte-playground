@@ -13,6 +13,7 @@ repos:
             args: []
             require_serial: false
             minimum_pre_commit_version: '0'
+            pass_filenames: false
 
           - id: eslint
             name: JavaScript Linting with ESLint
